@@ -10,10 +10,11 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <canvas class="splash-cursor-canvas" id="splash-cursor" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
 
   <header class="site-header">
-    <a class="logo" href="#top">Vibe Coder</a>
+    <a class="logo" href="#top">Татьяна Царькова — Vibe Coder</a>
     <nav class="site-nav" aria-label="По странице">
       <a href="#about">Обо мне</a>
       <a href="#skills">Умею</a>
@@ -27,8 +28,12 @@
       <div class="hero__layout">
         <div class="hero__content">
           <p class="eyebrow hero__reveal" style="--d: 0.05s">Vibe Coder / Portfolio / Web &amp; AI Experiences</p>
-          <h1 class="hero__title hero__reveal" style="--d: 0.12s">
-            Я делаю сайты, интерфейсы и digital-проекты, которые выглядят как вайб, а работают как система
+          <h1
+            class="hero__title hero__reveal hero__title--typing hero__title--shiny"
+            style="--d: 0.12s"
+            data-text="Я делаю сайты, интерфейсы и digital-проекты, которые выглядят как вайб, а работают как система"
+          >
+            Я делаю сайты, интерфейсы и <span class="hero__title-accent">digital</span>-проекты, которые выглядят как вайб, а работают как система
           </h1>
           <p class="hero__lead hero__reveal" style="--d: 0.2s">
             Не просто «что-то сверстать», а собрать ощущение, стиль, логику и подачу так, чтобы проект хотелось открыть, листать и запомнить.
@@ -39,12 +44,12 @@
           </div>
         </div>
         <figure class="hero__figure hero__figure--motion">
-          <div class="hero__portrait-inner">
+          <div class="hero__portrait-inner hero-image">
             <img
               class="hero__photo"
-              src="assets/portrait.png"
-              width="640"
-              height="800"
+              src="hero-good.png"
+              width="1152"
+              height="2048"
               alt="Портрет: Vibe Coder, digital и веб-опыт"
               decoding="async"
               fetchpriority="high"
@@ -112,7 +117,7 @@
 
     <section id="approach" class="section section--accent">
       <h2 class="section__title">Как я работаю</h2>
-      <ol class="steps">
+      <ol class="steps steps--animated">
         <li class="steps__item">
           <span class="steps__num">01</span>
           <div>
@@ -142,55 +147,68 @@
       <div class="cards cards--projects">
         <article class="project-card">
           <span class="project-card__meta">01</span>
-          <h3 class="project-card__title">AI Landing Experience</h3>
-          <p class="project-card__text">Лендинг для digital-продукта с акцентом на атмосферу, скорость восприятия и современный визуал.</p>
-          <p class="project-card__done"><strong>Что сделано:</strong> структура, тексты, дизайн-концепция, сборка.</p>
+          <figure class="project-card__media">
+            <img class="project-card__image" src="image1.png" alt="Кейс: портфолио-проект" loading="lazy" decoding="async" />
+          </figure>
+          <h3 class="project-card__title">Портфолио</h3>
+          <p class="project-card__text">Личный сайт с акцентом на стиль, подачу и визуальный характер эксперта.</p>
+          <p class="project-card__done"><strong>Что сделано:</strong> концепция, структура, визуальный ритм, упаковка.</p>
         </article>
         <article class="project-card">
           <span class="project-card__meta">02</span>
-          <h3 class="project-card__title">Portfolio for Creative Expert</h3>
-          <p class="project-card__text">Личный сайт-портфолио, который показывает не только кейсы, но и стиль человека.</p>
-          <p class="project-card__done"><strong>Что сделано:</strong> позиционирование, подача, визуальный ритм, упаковка работ.</p>
+          <figure class="project-card__media">
+            <img class="project-card__image" src="image2.png" alt="Кейс: лендинг" loading="lazy" decoding="async" />
+          </figure>
+          <h3 class="project-card__title">Лендинг</h3>
+          <p class="project-card__text">Сильный первый экран, атмосфера и сценарий, который ведет пользователя по смыслу.</p>
+          <p class="project-card__done"><strong>Что сделано:</strong> каркас, тексты, CTA-логика, дизайн-концепция.</p>
         </article>
         <article class="project-card">
           <span class="project-card__meta">03</span>
-          <h3 class="project-card__title">Bot &amp; Funnel Page</h3>
-          <p class="project-card__text">Промо-страница под воронку и digital-продукт с акцентом на конверсию и лёгкость восприятия.</p>
-          <p class="project-card__done"><strong>Что сделано:</strong> логика блоков, тексты, CTA, визуальный каркас.</p>
+          <figure class="project-card__media">
+            <img class="project-card__image" src="image3.png" alt="Кейс: концепт-сайт" loading="lazy" decoding="async" />
+          </figure>
+          <h3 class="project-card__title">Концепт</h3>
+          <p class="project-card__text">Визуальный концепт с дорогой подачей и атмосферой, который формирует впечатление бренда.</p>
+          <p class="project-card__done"><strong>Что сделано:</strong> creative direction, структура, визуальная стилистика.</p>
         </article>
         <article class="project-card">
           <span class="project-card__meta">04</span>
-          <h3 class="project-card__title">Concept Site for AI Creator</h3>
-          <p class="project-card__text">Сайт с упором на трендовую подачу, сильный первый экран и ощущение «это хочется переслать».</p>
-          <p class="project-card__done"><strong>Что сделано:</strong> creative direction, структура, визуальная концепция.</p>
+          <figure class="project-card__media">
+            <img class="project-card__image" src="image4.png" alt="Кейс: промо-проект" loading="lazy" decoding="async" />
+          </figure>
+          <h3 class="project-card__title">Промо</h3>
+          <p class="project-card__text">Промо-страница с акцентом на эмоцию, доверие и быстрое считывание ценности.</p>
+          <p class="project-card__done"><strong>Что сделано:</strong> визуальный сценарий, подача, структура, UI-полиш.</p>
         </article>
       </div>
     </section>
 
-    <section id="why" class="section section--split">
-      <div>
-        <h2 class="section__title">Почему ко мне идут не просто за кодом</h2>
-        <p class="lead">Потому что я умею видеть проект целиком.</p>
+    <section id="why" class="section section--split why--animated">
+      <div class="why__intro">
+        <h2 class="section__title">Почему ко мне идут не просто за кодом, а за ощущением проекта</h2>
+        <p class="lead">Я собираю не набор блоков, а атмосферу: чтобы сайт считывался с первого экрана и оставался в памяти.</p>
       </div>
       <div class="why__cols">
-        <div>
-          <p class="why__label">Не только:</p>
+        <div class="why__col">
+          <p class="why__label">Обычно это:</p>
           <ul class="why__list">
-            <li>как это собрать</li>
+            <li>технически собранная страница без характера</li>
+            <li>визуал «как у всех», который быстро забывается</li>
+            <li>контент есть, но нет энергии и ритма</li>
           </ul>
         </div>
-        <div>
-          <p class="why__label">но и:</p>
+        <div class="why__col">
+          <p class="why__label">Со мной это:</p>
           <ul class="why__list">
-            <li>как это подать</li>
-            <li>как это будет восприниматься</li>
-            <li>где человек зацепится взглядом</li>
-            <li>что запомнит</li>
-            <li>почему это будет выглядеть дороже, чем стоит</li>
+            <li>сильный вайб и стиль, который чувствуется сразу</li>
+            <li>визуальный ритм, за который цепляется взгляд</li>
+            <li>подача, где эстетика работает вместе со смыслом</li>
+            <li>сайт, который хочется открыть снова и переслать</li>
           </ul>
         </div>
       </div>
-      <p class="why__footer">Я соединяю: <span>эстетику + структуру + digital-мышление + скорость</span></p>
+      <p class="why__footer">Я соединяю: <span>стиль + впечатление + структуру + digital-мышление</span></p>
     </section>
 
     <section id="stack" class="section">
@@ -248,26 +266,274 @@
       <h2 class="section__title">Контакты</h2>
       <div class="contact__grid">
         <div>
-          <p><a href="https://t.me/yourname">Telegram: @yourname</a></p>
-          <p><a href="mailto:hello@yourmail.com">Email: hello@yourmail.com</a></p>
-        </div>
-        <div class="contact__social">
-          <p class="contact__label">Ссылки</p>
-          <ul>
-            <li><a href="#">Behance</a></li>
-            <li><a href="#">Dribbble</a></li>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Notion</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
+          <p><a href="https://t.me/tatut55">Telegram: @tatut55</a></p>
+          <p><a href="mailto:tv1527@mail.ru">Email: tv1527@mail.ru</a></p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <span>Vibe Coder</span>
+    <span>Татьяна Царькова</span>
     <span class="site-footer__year">2026</span>
   </footer>
+
+  <script>
+    (() => {
+      const title = document.querySelector(".hero__title--typing");
+      if (!title) return;
+
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const fullText = title.dataset.text || title.textContent.trim();
+
+      if (prefersReducedMotion) {
+        title.innerHTML = fullText.replace(/\bdigital\b/g, '<span class="hero__title-accent">digital</span>');
+        title.classList.add("hero__title--typed");
+        return;
+      }
+
+      const typingSpeed = 34;
+      const initialDelay = 420;
+      let index = 0;
+
+      const render = () => {
+        const chunk = fullText.slice(0, index);
+        title.innerHTML = chunk.replace(/\bdigital\b/g, '<span class="hero__title-accent">digital</span>');
+
+        if (index < fullText.length) {
+          index += 1;
+          setTimeout(render, typingSpeed);
+        } else {
+          title.classList.add("hero__title--typed");
+        }
+      };
+
+      title.classList.remove("hero__title--typed");
+      title.innerHTML = "";
+      setTimeout(render, initialDelay);
+    })();
+
+    (() => {
+      const steps = document.querySelector(".steps--animated");
+      if (!steps) return;
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion) {
+        steps.classList.add("is-visible");
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              steps.classList.add("is-visible");
+              observer.disconnect();
+            }
+          });
+        },
+        { threshold: 0.28 }
+      );
+
+      observer.observe(steps);
+    })();
+
+    (() => {
+      const section = document.querySelector(".why--animated");
+      if (!section) return;
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion) {
+        section.classList.add("is-visible");
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              section.classList.add("is-visible");
+              observer.disconnect();
+            }
+          });
+        },
+        { threshold: 0.24 }
+      );
+
+      observer.observe(section);
+    })();
+
+    (() => {
+      const canvas = document.getElementById("splash-cursor");
+      if (!canvas) return;
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const isMobile = window.matchMedia("(max-width: 900px)").matches;
+      if (reduceMotion || isMobile) return;
+
+      const ctx = canvas.getContext("2d", { alpha: true });
+      if (!ctx) return;
+
+      const CONFIG = {
+        DENSITY_DISSIPATION: 4.6,
+        VELOCITY_DISSIPATION: 2.8,
+        PRESSURE: 0.06,
+        CURL: 3,
+        SPLAT_RADIUS: 0.14,
+        SPLAT_FORCE: 3600,
+        COLOR_UPDATE_SPEED: 7,
+        SHADING: true,
+        RAINBOW_MODE: false,
+        COLOR: "#A855F7"
+      };
+
+      const particles = [];
+      let pointer = { x: 0, y: 0, px: 0, py: 0, moved: false, down: false };
+      let rafId = 0;
+      let lastTime = performance.now();
+      let hueSeed = 0;
+
+      const parseColor = hex => {
+        const value = hex.replace("#", "");
+        const full = value.length === 3
+          ? value.split("").map(ch => ch + ch).join("")
+          : value;
+        return {
+          r: parseInt(full.slice(0, 2), 16),
+          g: parseInt(full.slice(2, 4), 16),
+          b: parseInt(full.slice(4, 6), 16)
+        };
+      };
+
+      const baseColor = parseColor(CONFIG.COLOR);
+
+      const currentColor = () => {
+        if (!CONFIG.RAINBOW_MODE) return baseColor;
+        hueSeed = (hueSeed + CONFIG.COLOR_UPDATE_SPEED * 0.003) % 360;
+        const a = (Math.PI / 180) * hueSeed;
+        return {
+          r: Math.floor(128 + 127 * Math.sin(a)),
+          g: Math.floor(128 + 127 * Math.sin(a + 2.09)),
+          b: Math.floor(128 + 127 * Math.sin(a + 4.18))
+        };
+      };
+
+      const resize = () => {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.floor(window.innerWidth * dpr);
+        canvas.height = Math.floor(window.innerHeight * dpr);
+        canvas.style.width = `${window.innerWidth}px`;
+        canvas.style.height = `${window.innerHeight}px`;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      };
+
+      const spawnSplat = (x, y, dx, dy) => {
+        const speed = Math.hypot(dx, dy);
+        const strength = Math.min(0.9, 0.12 + speed * 0.028 + CONFIG.PRESSURE);
+        const count = 2 + Math.min(6, Math.floor(speed * 0.18));
+        const c = currentColor();
+
+        for (let i = 0; i < count; i += 1) {
+          const angle = Math.random() * Math.PI * 2;
+          const force = (CONFIG.SPLAT_FORCE / 6000) * (0.45 + Math.random() * 0.55) * strength;
+          const radius = Math.max(10, Math.min(32, window.innerWidth * CONFIG.SPLAT_RADIUS * 0.11));
+          const life = 0.34 + Math.random() * 0.32;
+          particles.push({
+            x: x + Math.cos(angle) * Math.random() * 6,
+            y: y + Math.sin(angle) * Math.random() * 6,
+            vx: (Math.cos(angle) * force + dx * 0.12),
+            vy: (Math.sin(angle) * force + dy * 0.12),
+            radius: radius * (0.58 + Math.random() * 0.56),
+            life,
+            maxLife: life,
+            color: c
+          });
+        }
+      };
+
+      const step = now => {
+        const dt = Math.min((now - lastTime) / 1000, 0.032);
+        lastTime = now;
+
+        ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+        for (let i = particles.length - 1; i >= 0; i -= 1) {
+          const p = particles[i];
+          p.life -= dt * (CONFIG.DENSITY_DISSIPATION * 0.46);
+          if (p.life <= 0) {
+            particles.splice(i, 1);
+            continue;
+          }
+
+          p.vx *= 1 - dt * (CONFIG.VELOCITY_DISSIPATION * 0.22);
+          p.vy *= 1 - dt * (CONFIG.VELOCITY_DISSIPATION * 0.22);
+          p.x += p.vx * dt * 60;
+          p.y += p.vy * dt * 60;
+
+          const alpha = Math.max(0, p.life / p.maxLife);
+          const glowAlpha = alpha * 0.14;
+          const coreAlpha = alpha * 0.07;
+
+          if (CONFIG.SHADING) {
+            const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius);
+            g.addColorStop(0, `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${glowAlpha})`);
+            g.addColorStop(0.45, `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${coreAlpha})`);
+            g.addColorStop(1, "rgba(0, 0, 0, 0)");
+            ctx.fillStyle = g;
+          } else {
+            ctx.fillStyle = `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${coreAlpha})`;
+          }
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        rafId = requestAnimationFrame(step);
+      };
+
+      const onMove = e => {
+        const x = e.clientX;
+        const y = e.clientY;
+        const dx = x - pointer.px;
+        const dy = y - pointer.py;
+
+        pointer.moved = Math.abs(dx) + Math.abs(dy) > 1;
+        pointer.x = x;
+        pointer.y = y;
+
+        if (pointer.moved) spawnSplat(x, y, dx, dy);
+
+        pointer.px = x;
+        pointer.py = y;
+      };
+
+      const onDown = e => {
+        pointer.down = true;
+        pointer.px = e.clientX;
+        pointer.py = e.clientY;
+        spawnSplat(e.clientX, e.clientY, 0, 0);
+      };
+
+      const onUp = () => { pointer.down = false; };
+
+      resize();
+      window.addEventListener("resize", resize);
+      window.addEventListener("mousemove", onMove, { passive: true });
+      window.addEventListener("mousedown", onDown, { passive: true });
+      window.addEventListener("mouseup", onUp, { passive: true });
+      rafId = requestAnimationFrame(step);
+
+      window.addEventListener("beforeunload", () => {
+        cancelAnimationFrame(rafId);
+        window.removeEventListener("resize", resize);
+        window.removeEventListener("mousemove", onMove);
+        window.removeEventListener("mousedown", onDown);
+        window.removeEventListener("mouseup", onUp);
+      });
+    })();
+
+  </script>
 </body>
 </html>
+
